@@ -1,20 +1,22 @@
 <template>
   <div class="button-container">
     <img src="../assets/images/leaf-left.jpg" class="leaf" />
-    <button class="button" @click="$emit('click')"><slot>Button</slot></button>
+    <button class="button" v-on="$listeners"><slot>Button</slot></button>
     <img src="../assets/images/leaf-right.jpg" class="leaf" />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Divider'
-}
+  name: "Divider",
+};
 </script>
 
 <style lang="scss" scoped>
 .button-container {
   display: flex;
+  justify-content: center;
+  align-items: center;
   .leaf {
     width: 46px;
     height: 48px;
@@ -22,9 +24,11 @@ export default {
   .button {
     padding: 0 28px;
     height: 44px;
+    border-radius: 2px;
+    margin: 0 10px;
     line-height: 44px;
-    background-color: #295238;
     color: #ffffff;
+    background-color: #295238;
   }
 }
 </style>

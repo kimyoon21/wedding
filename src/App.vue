@@ -1,22 +1,35 @@
 <template>
   <div id="gyong">
     <IntroMovie />
-    <Divider />
     <Live />
+    <Divider />
+    <Gallery />
+    <Divider />
+    <Celebrate />
+    <Divider />
+    <Funding />
+    <Divider />
+    <Credit />
   </div>
 </template>
 
 <script>
-import Divider from "./components/Divider.vue";
 import IntroMovie from "./components/IntroMovie.vue";
 import Live from "./components/Live.vue";
+import Gallery from "./components/Gallery.vue";
+import Funding from "./components/Funding.vue";
+import Credit from "./components/Credit.vue";
+import Celebrate from "./components/Celebrate.vue";
 
 export default {
   name: "App",
   components: {
-    Divider,
     IntroMovie,
     Live,
+    Gallery,
+    Funding,
+    Credit,
+    Celebrate,
   },
 };
 </script>
@@ -151,6 +164,13 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+button {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  font: inherit;
 }
 * {
   box-sizing: border-box;
