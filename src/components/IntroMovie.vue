@@ -4,7 +4,7 @@
       <img src="../assets/images/intro-image.png" />
     </div>
     <div class="movie">
-      <video src="/test.mp4" autoplay />
+      <video src="/test.mp4" autoplay controls muted />
     </div>
   </div>
 </template>
@@ -21,6 +21,7 @@ export default {
   flex-direction: column;
   height: 100vh;
   max-height: 780px;
+  background-color: #ffffff;
   .image {
     display: flex;
     flex: 1;
