@@ -1,7 +1,7 @@
 <template>
   <div class="intro-movie">
     <div class="image">
-      <img src="../assets/images/intro-image.jpg" />
+      <img src="../assets/images/intro-image.png" />
     </div>
     <div class="movie">
       <video src="/test.mp4" autoplay />

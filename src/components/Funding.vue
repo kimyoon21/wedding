@@ -1,6 +1,6 @@
 <template>
   <div class="funding">
-    <img src="../assets/images/hands.jpg" class="hands" />
+    <img src="../assets/images/hands.png" class="hands" />
     <h2 class="h2">
       둘째, 결혼을 기념하는 기부금 전하기
     </h2>

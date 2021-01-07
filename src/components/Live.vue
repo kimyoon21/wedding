@@ -1,6 +1,6 @@
 <template>
   <div class="live">
-    <img src="../assets/images/flower.jpg" class="flower" />
+    <img src="../assets/images/flower.png" class="flower" />
     <div>
       <p>
         각자의 삶을 열심히 살아온 저희가,<br />
@@ -24,10 +24,10 @@
 
 <script>
 export default {
-  name: "Divider",
+  name: 'Divider',
   methods: {
     attendance() {
-      window.open("https://youtu.be/yU9UULnBt0w");
+      window.open('https://youtu.be/yU9UULnBt0w');
     },
   },
 };

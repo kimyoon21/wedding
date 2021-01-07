@@ -1,15 +1,21 @@
 <template>
   <div class="gallery">
-    <img src="../assets/images/bunny.jpg" class="bunny" />
+    <img src="../assets/images/bunny.png" class="bunny" />
     <div class="description">
       photo gallery
+    </div>
+    <div class="gallery-container">
+      <div class="gallery-item">
+        <div class="image"></div>
+        <div class="arch"></div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Gallery",
+  name: 'Gallery',
 };
 </script>
 

@@ -13,7 +13,7 @@
       더 의미있을거라는 생각에<br />
       2가지 방법을 준비해보았어요.
     </p>
-    <img src="../assets/images/goose.jpg" class="goose" />
+    <img src="../assets/images/goose.png" class="goose" />
     <h2 class="h2">
       첫째. 쓸 때마다 당신을 떠올릴 선물하기
     </h2>
@@ -39,7 +39,7 @@
       </div>
     </div>
 
-    <img src="../assets/images/cat.jpg" class="cat" />
+    <img src="../assets/images/cat.png" class="cat" />
     <p class="black">
       휴지, 물티슈, 디퓨저 등은 이미 너무 많아서<br />
       당근마켓에 팔아야 하나 고민인 수준이라 정중하게 사양할게요.<br />
@@ -51,7 +51,7 @@
 
 <script>
 export default {
-  name: "Celebrate",
+  name: 'Celebrate',
 };
 </script>
 
