@@ -14,15 +14,15 @@
 </template>
 
 <script>
-import IntroMovie from "./components/IntroMovie.vue";
-import Live from "./components/Live.vue";
-import Gallery from "./components/Gallery.vue";
-import Funding from "./components/Funding.vue";
-import Credit from "./components/Credit.vue";
-import Celebrate from "./components/Celebrate.vue";
+import IntroMovie from './components/IntroMovie.vue';
+import Live from './components/Live.vue';
+import Gallery from './components/Gallery.vue';
+import Funding from './components/Funding.vue';
+import Credit from './components/Credit.vue';
+import Celebrate from './components/Celebrate.vue';
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
     IntroMovie,
     Live,
@@ -36,9 +36,9 @@ export default {
 
 <style>
 @font-face {
-  font-family: "Cafe24Oneprettynight";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Oneprettynight.woff")
-    format("woff");
+  font-family: 'Cafe24Oneprettynight';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Oneprettynight.woff')
+    format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -158,7 +158,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
+  content: '';
   content: none;
 }
 table {
@@ -176,10 +176,11 @@ button {
   box-sizing: border-box;
 }
 #gyong {
-  font-family: "Cafe24Oneprettynight", sans-serif;
+  font-family: 'Cafe24Oneprettynight', sans-serif;
   max-width: 460px;
   margin: 0 auto;
-  font-size: 14px;
+  font-size: 15px;
   color: #202121;
+  background-color: #fffdf9;
 }
 </style>

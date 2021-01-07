@@ -15,17 +15,18 @@
       끼니를 해결하지 못하는 아이들에게<br />
       따뜻한 한 끼로 나누어주세요.
     </p>
-    <Button @click="funding">기부처 확인하기</Button>
+    <Button @click="funding">기부하기</Button>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Divider",
+  name: 'Divider',
   methods: {
     funding() {
       window.open(
-        "https://www.kfhi.or.kr/apps/campaign/2020_stophunger_domestic_2.asp?id=540&mcode=658&utm_medium=display_ad&utm_source=youtube&utm_campaign=2020_stophunger_domestic_2&gclid=Cj0KCQiA5bz-BRD-ARIsABjT4nieWe1teUo7KT5HSTinY-IG9KFVj7BRfzI7I_YYAqapQ4jQFsqEqYIaAvqqEALw_wcB"
+        'https://qr.kakaopay.com/281006011189386490008935'
+        // "https://www.kfhi.or.kr/apps/campaign/2020_stophunger_domestic_2.asp?id=540&mcode=658&utm_medium=display_ad&utm_source=youtube&utm_campaign=2020_stophunger_domestic_2&gclid=Cj0KCQiA5bz-BRD-ARIsABjT4nieWe1teUo7KT5HSTinY-IG9KFVj7BRfzI7I_YYAqapQ4jQFsqEqYIaAvqqEALw_wcB"
       );
     },
   },
