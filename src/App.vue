@@ -1,5 +1,6 @@
 <template>
   <div id="gyong">
+    <FlowerRain />
     <IntroMovie />
     <Live />
     <Divider />
@@ -30,6 +31,7 @@ export default {
     Funding,
     Credit,
     Celebrate,
+    BottomSheet,
   },
 };
 </script>
