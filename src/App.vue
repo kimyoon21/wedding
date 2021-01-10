@@ -1,3 +1,5 @@
+
+
 <template>
   <div id="gyong">
     <FlowerRain />
@@ -6,24 +8,34 @@
     <Divider />
     <Gallery />
     <Divider />
-    <Celebrate />
+    <Celebrate @click="handleClick" :presents="presents" />
     <Divider />
     <Funding />
     <Divider />
     <Credit />
+    <BottomSheet
+      :is-open="isOpen"
+      @close="handleClose"
+      v-scroll-lock="isOpen"
+      :present="selectedPresent"
+    />
   </div>
 </template>
 
 <script>
-import IntroMovie from './components/IntroMovie.vue';
-import Live from './components/Live.vue';
-import Gallery from './components/Gallery.vue';
-import Funding from './components/Funding.vue';
-import Credit from './components/Credit.vue';
-import Celebrate from './components/Celebrate.vue';
+import IntroMovie from "./components/IntroMovie.vue";
+import Live from "./components/Live.vue";
+import Gallery from "./components/Gallery.vue";
+import Funding from "./components/Funding.vue";
+import Credit from "./components/Credit.vue";
+import Celebrate from "./components/Celebrate.vue";
+import FlowerRain from "./components/FlowerRain.vue";
+import BottomSheet from "./components/BottomSheet.vue";
+import firebase from "firebase";
 
 export default {
-  name: 'App',
+  name: "App",
+  directives: {},
   components: {
     IntroMovie,
     Live,
@@ -31,16 +43,45 @@ export default {
     Funding,
     Credit,
     Celebrate,
+    FlowerRain,
     BottomSheet,
+  },
+  data() {
+    return {
+      isOpen: false,
+      presents: [],
+      selectedPresent: {},
+    };
+  },
+  created() {
+    var presentsRef = firebase.database().ref("presents");
+    presentsRef.on("value", (snapshot) => {
+      const presents = snapshot.val();
+      this.presents = presents.map((present, index) => {
+        return {
+          ...present,
+          id: index,
+        };
+      });
+    });
+  },
+  methods: {
+    handleClick(present) {
+      this.isOpen = !this.isOpen;
+      this.selectedPresent = present;
+    },
+    handleClose() {
+      this.isOpen = false;
+    },
   },
 };
 </script>
 
 <style>
 @font-face {
-  font-family: 'Cafe24Oneprettynight';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Oneprettynight.woff')
-    format('woff');
+  font-family: "Cafe24Oneprettynight";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Oneprettynight.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -160,7 +201,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
+  content: "";
   content: none;
 }
 table {
@@ -178,7 +219,7 @@ button {
   box-sizing: border-box;
 }
 #gyong {
-  font-family: 'Cafe24Oneprettynight', sans-serif;
+  font-family: "Cafe24Oneprettynight", sans-serif;
   max-width: 460px;
   margin: 0 auto;
   font-size: 15px;
