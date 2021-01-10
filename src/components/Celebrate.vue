@@ -141,7 +141,7 @@ export default {
 
         &.is-disable {
           display: block;
-          opacity: 0.5;
+          opacity: 0.3;
         }
       }
       .thumbnail {
