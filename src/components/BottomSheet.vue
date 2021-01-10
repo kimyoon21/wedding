@@ -99,8 +99,7 @@ export default {
       this.updatePresent();
     },
     copyAddress() {
-      // TODO: 주소 필요
-      const address = "address2";
+      const address = "서울시 강남구 역삼동 792-33 서담빌리지A동 205호";
       var tmpTextarea = document.createElement("textarea");
       tmpTextarea.value = address;
 
