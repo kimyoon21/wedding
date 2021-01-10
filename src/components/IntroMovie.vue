@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: 'IntroMovie',
+  name: "IntroMovie",
 };
 </script>
 
@@ -29,8 +29,10 @@ export default {
     padding-right: $padding-vertical;
     justify-content: center;
     align-items: center;
+    padding-top: 10vh;
     img {
-      width: 100%;
+      max-width: 100%;
+      max-height: 100%;
     }
   }
   .movie {
