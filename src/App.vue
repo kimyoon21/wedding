@@ -35,7 +35,6 @@ import firebase from "firebase";
 
 export default {
   name: "App",
-  directives: {},
   components: {
     IntroMovie,
     Live,
@@ -54,18 +53,24 @@ export default {
     };
   },
   created() {
-    var presentsRef = firebase.database().ref("presents");
-    presentsRef.on("value", (snapshot) => {
-      const presents = snapshot.val();
-      this.presents = presents.map((present, index) => {
-        return {
-          ...present,
-          id: index,
-        };
-      });
-    });
+    this.loadPresents();
+  },
+  updated() {
+    window.scrollTo(0, window.scrollY + 1);
   },
   methods: {
+    loadPresents() {
+      const presentsRef = firebase.database().ref("presents");
+      presentsRef.on("value", (snapshot) => {
+        const presents = snapshot.val();
+        this.presents = presents.map((present, index) => {
+          return {
+            ...present,
+            id: index,
+          };
+        });
+      });
+    },
     handleClick(present) {
       this.isOpen = !this.isOpen;
       this.selectedPresent = present;

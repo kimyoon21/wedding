@@ -23,13 +23,13 @@
 
     <div class="gift-list">
       <div
-        data-aos="fade-up"
-        data-aos-duration="800"
-        :data-aos-delay="index % 2 === 0 ? 0 : 200"
         :class="['gift', { isDisable: present.isSoldout }]"
         v-for="(present, index) in presents"
         :key="present.name"
-        @click="handleClick(present)"
+        data-aos="fade-up"
+        data-aos-duration="800"
+        :data-aos-delay="index % 2 === 0 ? 0 : 200"
+        @click="handleSubmitClick(present)"
       >
         <div :class="['overlay', { isDisable: present.isSoldout }]"></div>
         <div class="thumbnail">
@@ -64,7 +64,7 @@ export default {
     },
   },
   methods: {
-    handleClick(present) {
+    handleSubmitClick(present) {
       if (present.isSoldout) {
         return;
       }

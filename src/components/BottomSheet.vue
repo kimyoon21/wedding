@@ -24,6 +24,7 @@
               <div class="price-container">
                 <div class="price">
                   {{
+                    present.price &&
                     present.price
                       .toString()
                       .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
@@ -51,12 +52,7 @@
             </div>
           </div>
 
-          <input
-            type="hidden"
-            value="test1"
-            id="testing-code"
-            class="testing-code"
-          />
+          <input type="hidden" value="주소주소주소" id="address" />
 
           <button :class="['button', { active: isValid }]" @click="handleClick">
             선물하기
@@ -103,9 +99,26 @@ export default {
         return;
       }
 
-      this.update();
+      this.updatePresent();
     },
-    update() {
+    copyAddress() {
+      // TODO: 주소 필요
+      const input = document.querySelector("#address");
+      input.setAttribute("type", "text");
+      input.select();
+      document.execCommand("copy");
+      input.setAttribute("type", "hidden");
+      window.getSelection().removeAllRanges();
+    },
+    updatePresent() {
+      const isConfirmed = confirm(
+        `${this.present.name} 선물을 하시겠어요? 확인해주시면 선물 완료로 표시됩니다.`
+      );
+
+      if (!isConfirmed) {
+        return;
+      }
+
       firebase
         .database()
         .ref("presents/" + this.present.id)
@@ -119,15 +132,15 @@ export default {
           (error) => {
             if (error) {
               console.error(error.message);
-            } else {
-              const input = document.querySelector("#testing-code");
-              input.setAttribute("type", "text");
-              input.select();
-              document.execCommand("copy");
-              input.setAttribute("type", "hidden");
-              window.getSelection().removeAllRanges();
-              alert("yeah");
+              return;
             }
+
+            this.copyAddress();
+            this.handleClose();
+            this.senderName = null;
+            this.message = null;
+
+            alert("신혼집 주소가 복사되었습니다. 선물 감사합니다.");
           }
         );
     },
@@ -272,11 +285,6 @@ export default {
           font-size: 12px;
         }
       }
-    }
-
-    #testing-code,
-    .testing-code {
-      display: hidden;
     }
 
     .button {

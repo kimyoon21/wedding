@@ -23,6 +23,7 @@ var firebaseConfig = {
   appId: '1:933753496890:web:be98a01593e6483b7e9c03',
 }
 firebase.initializeApp(firebaseConfig)
+
 new AOS.init()
 
 new Vue({
