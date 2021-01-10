@@ -22,6 +22,7 @@ export default {
   height: 100vh;
   max-height: 780px;
   background-color: #ffffff;
+  font-size: 0;
   .image {
     display: flex;
     flex: 1;
