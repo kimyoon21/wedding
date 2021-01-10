@@ -66,6 +66,7 @@ export default {
   methods: {
     handleSubmitClick(present) {
       if (present.isSoldout) {
+        alert("이미 다른 사람이 선물했어요.");
         return;
       }
 

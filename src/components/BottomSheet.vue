@@ -100,45 +100,17 @@ export default {
     },
     copyAddress() {
       // TODO: 주소 필요
-      let textarea;
-      let result;
-      const address = "address";
+      const address = "address2";
+      var tmpTextarea = document.createElement("textarea");
+      tmpTextarea.value = address;
 
-      try {
-        textarea = document.createElement("textarea");
-        textarea.setAttribute("readonly", true);
-        textarea.setAttribute("contenteditable", true);
-        textarea.style.position = "fixed";
-        textarea.value = address;
+      document.body.appendChild(tmpTextarea);
+      tmpTextarea.select();
+      tmpTextarea.setSelectionRange(0, 9999);
 
-        document.body.appendChild(textarea);
-
-        textarea.focus();
-        textarea.select();
-
-        const range = document.createRange();
-        range.selectNodeContents(textarea);
-
-        const sel = window.getSelection();
-        sel.removeAllRanges();
-        sel.addRange(range);
-
-        textarea.setSelectionRange(0, textarea.value.length);
-        result = document.execCommand("copy");
-      } catch (err) {
-        console.error(err);
-        result = null;
-      } finally {
-        document.body.removeChild(textarea);
-      }
-
-      if (!result) {
-        result = prompt("꾸욱 눌러서 복사해주세요.", address);
-        if (!result) {
-          return false;
-        }
-      }
-      return true;
+      document.execCommand("copy");
+      document.body.removeChild(tmpTextarea);
+      alert("신혼집 주소가 복사되었어요.");
     },
     updatePresent() {
       const isConfirmed = confirm(
@@ -169,8 +141,6 @@ export default {
             this.handleClose();
             this.senderName = null;
             this.message = null;
-
-            alert("신혼집 주소가 복사되었습니다. 선물 감사합니다.");
           }
         );
     },
