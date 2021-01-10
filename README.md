@@ -1,4 +1,4 @@
-# gyong
+# 굥굥 KyongKyong
 
 ## Project setup
 ```
