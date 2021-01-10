@@ -1,11 +1,7 @@
 <template>
   <div class="celebrate">
-    <div class="description">
-      how to celebrate
-    </div>
-    <h2 class="h2">
-      두 사람에게 축하의 마음 전하는 방법
-    </h2>
+    <div class="description">how to celebrate</div>
+    <h2 class="h2">두 사람에게 축하의 마음 전하는 방법</h2>
     <p>
       직접 만나지는 못해도<br />
       축하해주고 싶은 마음은 가득한 당신으로부터<br />
@@ -14,9 +10,7 @@
       2가지 방법을 준비해보았어요.
     </p>
     <img src="../assets/images/goose.png" class="goose" />
-    <h2 class="h2">
-      첫째. 쓸 때마다 당신을 떠올릴 선물하기
-    </h2>
+    <h2 class="h2">첫째. 쓸 때마다 당신을 떠올릴 선물하기</h2>
     <p class="black">
       저희가 신혼집을 꾸리고 살면서<br />
       꼭 필요한 물건들을 적어보았어요.<br />
@@ -28,13 +22,24 @@
     </p>
 
     <div class="gift-list">
-      <div class="gift" v-for="n in 10" :key="n">
-        <div class="thumbnail"></div>
+      <div
+        :class="['gift', { isDisable: present.isSoldout }]"
+        v-for="(present, index) in presents"
+        :key="present.name + index"
+        data-aos="fade-up"
+        data-aos-duration="800"
+        :data-aos-delay="index % 2 === 0 ? 0 : 200"
+        @click="handleSubmitClick(present)"
+      >
+        <div :class="['overlay', { isDisable: present.isSoldout }]"></div>
+        <div class="thumbnail">
+          <img :src="present.imageUrl" alt="" srcset="" />
+        </div>
         <div class="contents">
-          <div class="title">
-            내 입술 따뜻한 커피처럼
+          <div class="title">{{ present.title }}</div>
+          <div class="action">
+            <img src="../assets/images/heart.svg" alt="" srcset="" />선물하기
           </div>
-          <div class="action">선물하기</div>
         </div>
       </div>
     </div>
@@ -51,7 +56,22 @@
 
 <script>
 export default {
-  name: 'Celebrate',
+  name: "Celebrate",
+  props: {
+    presents: {
+      type: Array,
+      default: () => [],
+    },
+  },
+  methods: {
+    handleSubmitClick(present) {
+      if (present.isSoldout) {
+        return;
+      }
+
+      this.$emit("click", present);
+    },
+  },
 };
 </script>
 
@@ -63,6 +83,7 @@ export default {
   padding-right: $padding-vertical;
   text-align: center;
   color: #295138;
+  cursor: pointer;
   .description {
     font-size: 12px;
     letter-spacing: 6px;
@@ -93,18 +114,44 @@ export default {
   .gift-list {
     width: 298px;
     margin: 32px auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+
     .gift {
-      width: 142px;
-      height: 226px;
+      display: inline-block;
+      width: calc(50% - 7px);
       box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.16);
       margin-bottom: 16px;
+      cursor: pointer;
+      background: white;
+
+      &.isDisable {
+        cursor: default;
+      }
+
+      &:nth-child(2n -1) {
+        margin-right: 14px;
+      }
+
+      .overlay {
+        background: white;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        opacity: 0;
+
+        &.isDisable {
+          display: block;
+          opacity: 50%;
+        }
+      }
       .thumbnail {
-        width: 142px;
-        height: 142px;
-        background-color: #333333;
+        width: 100%;
+        height: auto;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
       }
       .contents {
         padding: 8px;
@@ -112,13 +159,19 @@ export default {
         color: #202121;
         .title {
           font-size: 14px;
+          line-height: 1.43;
+          height: 40px;
           word-break: keep-all;
-          font-weight: bold;
-          font-family: AppleSDGothicNeo, sans-serif;
         }
         .action {
           font-size: 10px;
-          font-family: AppleSDGothicNeo, sans-serif;
+          margin-top: 12px;
+          display: flex;
+          align-items: center;
+
+          img {
+            margin-right: 4px;
+          }
         }
       }
     }
