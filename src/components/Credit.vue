@@ -5,42 +5,42 @@
     </h3>
     <div class="profile-list">
       <div class="profile">
-        <a target="_blank" src="https://www.instagram.com/eachee_916/">
+        <a target="_blank" href="https://www.instagram.com/eachee_916/">
           <div class="thumbnail susan"></div>
           <div class="name">Susan</div>
           <div class="role">애니메이션</div>
         </a>
       </div>
       <div class="profile">
-        <a target="_blank" src="https://blog.gangnamunni.com/blog/design">
+        <a target="_blank" href="https://blog.gangnamunni.com/blog/design">
           <div class="thumbnail anna"></div>
           <div class="name">Anna</div>
           <div class="role">브랜딩</div>
         </a>
       </div>
       <div class="profile">
-        <a target="_blank" src="http://brunch.co.kr/@hee072794">
+        <a target="_blank" href="http://brunch.co.kr/@hee072794">
           <div class="thumbnail wonny"></div>
           <div class="name">Wonny</div>
           <div class="role">개발</div>
         </a>
       </div>
       <div class="profile">
-        <a target="_blank" src="https://blog.gangnamunni.com/blog/web">
+        <a target="_blank" href="https://blog.gangnamunni.com/blog/web">
           <div class="thumbnail chichi"></div>
           <div class="name">Chichi</div>
           <div class="role">개발</div>
         </a>
       </div>
       <div class="profile">
-        <a target="_blank" src="https://blog.gangnamunni.com/blog/design">
+        <a target="_blank" href="https://blog.gangnamunni.com/blog/design">
           <div class="thumbnail jane"></div>
           <div class="name">Jane</div>
           <div class="role">디자인</div>
         </a>
       </div>
       <div class="profile">
-        <a target="_blank" src="https://brunch.co.kr/@kimyoon21/30">
+        <a target="_blank" href="https://brunch.co.kr/@kimyoon21/30">
           <div class="thumbnail brown"></div>
           <div class="name">Brown</div>
           <div class="role">PO</div>
@@ -84,6 +84,10 @@ export default {
     margin-bottom: 14px;
     .profile {
       padding: 0 20px 24px 20px;
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
       .thumbnail {
         width: 48px;
         height: 48px;
