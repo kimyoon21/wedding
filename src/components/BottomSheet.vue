@@ -19,9 +19,7 @@
 
           <div class="form-container">
             <div class="form-header">
-              <div class="title">
-                {{ present.name }}
-              </div>
+              <div class="title">{{ present.name }} | {{ present.model }}</div>
               <div class="price-container">
                 <div class="price">
                   {{
