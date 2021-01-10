@@ -5,44 +5,52 @@
     </h3>
     <div class="profile-list">
       <div class="profile">
-        <div class="thumbnail susan"></div>
-        <div class="name">Susan</div>
-        <div class="role">애니메이션</div>
+        <a target="_blank" src="https://www.instagram.com/eachee_916/">
+          <div class="thumbnail susan"></div>
+          <div class="name">Susan</div>
+          <div class="role">애니메이션</div>
+        </a>
       </div>
       <div class="profile">
-        <div class="thumbnail anna"></div>
-        <div class="name">Anna</div>
-        <div class="role">브랜딩</div>
+        <a target="_blank" src="https://blog.gangnamunni.com/blog/design">
+          <div class="thumbnail anna"></div>
+          <div class="name">Anna</div>
+          <div class="role">브랜딩</div>
+        </a>
       </div>
       <div class="profile">
-        <div class="thumbnail wonny"></div>
-        <div class="name">Wonny</div>
-        <div class="role">개발</div>
+        <a target="_blank" src="http://brunch.co.kr/@hee072794">
+          <div class="thumbnail wonny"></div>
+          <div class="name">Wonny</div>
+          <div class="role">개발</div>
+        </a>
       </div>
       <div class="profile">
-        <div class="thumbnail chichi"></div>
-        <div class="name">Chichi</div>
-        <div class="role">개발</div>
+        <a target="_blank" src="https://blog.gangnamunni.com/blog/web">
+          <div class="thumbnail chichi"></div>
+          <div class="name">Chichi</div>
+          <div class="role">개발</div>
+        </a>
       </div>
       <div class="profile">
-        <div class="thumbnail jane"></div>
-        <div class="name">Jane</div>
-        <div class="role">디자인</div>
+        <a target="_blank" src="https://blog.gangnamunni.com/blog/design">
+          <div class="thumbnail jane"></div>
+          <div class="name">Jane</div>
+          <div class="role">디자인</div>
+        </a>
       </div>
       <div class="profile">
-        <div class="thumbnail brown"></div>
-        <div class="name">Brown</div>
-        <div class="role">PO</div>
+        <a target="_blank" src="https://brunch.co.kr/@kimyoon21/30">
+          <div class="thumbnail brown"></div>
+          <div class="name">Brown</div>
+          <div class="role">PO</div>
+        </a>
       </div>
     </div>
     <p class="description">
       하나를 해도 제대로 하는 이 사람들이 궁금한가요?
     </p>
-    <a
-      href="https://blog.gangnamunni.com/recruit"
-      target="_blank"
-      class="recruit"
-    >
+    <a href="https://blog.gangnamunni.com/" target="_blank" class="recruit">
       동료가 되기
     </a>
   </div>
@@ -84,23 +92,24 @@ export default {
         margin-bottom: 6px;
         background-position: center;
         background-repeat: no-repeat;
+        background-size: cover;
         &.susan {
-          background-image: url(~@/public/img/credit/susan.jpg);
+          background-image: url(/img/credit/susan.jpg);
         }
         &.wonny {
-          background-image: url(~@/public/img/credit/wonny.jpg);
+          background-image: url(/img/credit/wonny.jpg);
         }
         &.jane {
-          background-image: url(~@/public/img/credit/jane.jpg);
+          background-image: url(/img/credit/jane.jpg);
         }
-        &.brown {
-          background-image: url(~@/public/img/credit/brown.jpg);
+        &.anna {
+          background-image: url(/img/credit/anna.jpg);
         }
         &.chichi {
-          background-image: url(~@/public/img/credit/chichi.jpg);
+          background-image: url(/img/credit/chichi.jpg);
         }
         &.brown {
-          background-image: url(~@/public/img/credit/brown.jpg);
+          background-image: url(/img/credit/brown.jpg);
         }
       }
       .name {
