@@ -5,32 +5,32 @@
     </h3>
     <div class="profile-list">
       <div class="profile">
-        <div class="thumbnail"></div>
+        <div class="thumbnail susan"></div>
         <div class="name">Susan</div>
         <div class="role">애니메이션</div>
       </div>
       <div class="profile">
-        <div class="thumbnail"></div>
+        <div class="thumbnail anna"></div>
         <div class="name">Anna</div>
         <div class="role">브랜딩</div>
       </div>
       <div class="profile">
-        <div class="thumbnail"></div>
+        <div class="thumbnail wonny"></div>
         <div class="name">Wonny</div>
         <div class="role">개발</div>
       </div>
       <div class="profile">
-        <div class="thumbnail"></div>
+        <div class="thumbnail chichi"></div>
         <div class="name">Chichi</div>
         <div class="role">개발</div>
       </div>
       <div class="profile">
-        <div class="thumbnail"></div>
+        <div class="thumbnail jane"></div>
         <div class="name">Jane</div>
         <div class="role">디자인</div>
       </div>
       <div class="profile">
-        <div class="thumbnail"></div>
+        <div class="thumbnail brown"></div>
         <div class="name">Brown</div>
         <div class="role">PO</div>
       </div>
@@ -50,14 +50,7 @@
 
 <script>
 export default {
-  name: "Divider",
-  methods: {
-    credit() {
-      window.open(
-        "https://www.kfhi.or.kr/apps/campaign/2020_stophunger_domestic_2.asp?id=540&mcode=658&utm_medium=display_ad&utm_source=youtube&utm_campaign=2020_stophunger_domestic_2&gclid=Cj0KCQiA5bz-BRD-ARIsABjT4nieWe1teUo7KT5HSTinY-IG9KFVj7BRfzI7I_YYAqapQ4jQFsqEqYIaAvqqEALw_wcB"
-      );
-    },
-  },
+  name: "Credit",
 };
 </script>
 
@@ -89,6 +82,26 @@ export default {
         border-radius: 50%;
         background-color: black;
         margin-bottom: 6px;
+        background-position: center;
+        background-repeat: no-repeat;
+        &.susan {
+          background-image: url(~@/public/img/credit/susan.jpg);
+        }
+        &.wonny {
+          background-image: url(~@/public/img/credit/wonny.jpg);
+        }
+        &.jane {
+          background-image: url(~@/public/img/credit/jane.jpg);
+        }
+        &.brown {
+          background-image: url(~@/public/img/credit/brown.jpg);
+        }
+        &.chichi {
+          background-image: url(~@/public/img/credit/chichi.jpg);
+        }
+        &.brown {
+          background-image: url(~@/public/img/credit/brown.jpg);
+        }
       }
       .name {
         font-size: 14px;
