@@ -84,6 +84,10 @@ export default {
     margin-bottom: 14px;
     .profile {
       padding: 0 20px 24px 20px;
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
       .thumbnail {
         width: 48px;
         height: 48px;
