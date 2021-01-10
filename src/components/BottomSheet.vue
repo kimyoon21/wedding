@@ -216,7 +216,7 @@ export default {
   top: 0;
   position: fixed;
   z-index: 999;
-  margin-top: 90px;
+  margin-top: 50px;
 
   .bottom-sheet {
     width: 100%;
@@ -306,8 +306,8 @@ export default {
 
           &.message {
             margin-bottom: 16px;
-            height: 80px;
-            min-height: 80px;
+            height: 50px;
+            min-height: 50px;
             vertical-align: to-upper-case($string: "");
             resize: none;
           }

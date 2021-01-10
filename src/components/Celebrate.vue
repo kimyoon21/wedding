@@ -23,7 +23,7 @@
 
     <div class="gift-list">
       <div
-        :class="['gift', { isDisable: present.isSoldout }]"
+        :class="['gift', { 'is-disable': present.isSoldout }]"
         v-for="(present, index) in presents"
         :key="present.name + index"
         data-aos="fade-up"
@@ -31,7 +31,7 @@
         :data-aos-delay="index % 2 === 0 ? 0 : 200"
         @click="handleSubmitClick(present)"
       >
-        <div :class="['overlay', { isDisable: present.isSoldout }]"></div>
+        <div :class="['overlay', { 'is-disable': present.isSoldout }]"></div>
         <div class="thumbnail">
           <img :src="present.imageUrl" alt="" srcset="" />
         </div>
@@ -123,7 +123,7 @@ export default {
       cursor: pointer;
       background: white;
 
-      &.isDisable {
+      &.is-disable {
         cursor: default;
       }
 
@@ -138,7 +138,7 @@ export default {
         position: absolute;
         opacity: 0;
 
-        &.isDisable {
+        &.is-disable {
           display: block;
           opacity: 50%;
         }
