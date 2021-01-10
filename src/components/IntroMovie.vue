@@ -4,7 +4,7 @@
       <img src="../assets/images/intro-image.png" />
     </div>
     <div class="movie">
-      <video src="/test.mp4" autoplay controls muted />
+      <video src="/test.mp4" autoplay controls />
     </div>
   </div>
 </template>
@@ -22,14 +22,14 @@ export default {
   height: 100vh;
   max-height: 780px;
   background-color: #ffffff;
+  font-size: 0;
   .image {
     display: flex;
     flex: 1;
     padding-left: $padding-vertical;
     padding-right: $padding-vertical;
     justify-content: center;
-    align-items: center;
-    padding-top: 10vh;
+    align-items: flex-end;
     img {
       max-width: 100%;
       max-height: 100%;

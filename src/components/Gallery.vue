@@ -33,7 +33,7 @@
 
 <script>
 export default {
-  name: 'Gallery',
+  name: "Gallery",
   data() {
     return {
       scrollX: 0,
@@ -41,14 +41,14 @@ export default {
     };
   },
   mounted() {
-    this.$refs.gal.addEventListener('scroll', (event) => {
+    this.$refs.gal.addEventListener("scroll", (event) => {
       this.scrollX = event.target.scrollLeft;
     });
     this.width = Math.max(
       document.documentElement.clientWidth || 0,
       window.innerWidth || 0
     );
-    this.$refs.gal.scrollLeft = 750;
+    this.$refs.gal.scrollLeft = 850;
   },
 };
 </script>
@@ -74,7 +74,7 @@ export default {
   .gallery-container {
     padding-left: 50%;
     padding-right: 50%;
-    margin-left: -120px;
+    margin-left: -22px;
     margin-right: -22px;
     overflow-x: auto;
     .gallery-inner {
@@ -91,7 +91,7 @@ export default {
           top: 0;
           left: -1px;
           display: block;
-          content: '';
+          content: "";
           width: 2px;
           height: 360px;
           background-color: #fffdf9;
@@ -102,7 +102,7 @@ export default {
           top: 0;
           right: -1px;
           display: block;
-          content: '';
+          content: "";
           width: 2px;
           height: 360px;
           background-color: #fffdf9;
@@ -114,7 +114,7 @@ export default {
           left: 0;
           width: 240px;
           height: 360px;
-          background-image: url('../assets/images/arch.png');
+          background-image: url("../assets/images/arch.png");
           background-repeat: no-repeat;
           background-size: 240px auto;
           background-position: top left;
