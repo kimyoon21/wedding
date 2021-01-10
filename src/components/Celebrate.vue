@@ -25,7 +25,7 @@
       <div
         :class="['gift', { isDisable: present.isSoldout }]"
         v-for="(present, index) in presents"
-        :key="present.name"
+        :key="present.name + index"
         data-aos="fade-up"
         data-aos-duration="800"
         :data-aos-delay="index % 2 === 0 ? 0 : 200"
@@ -114,18 +114,21 @@ export default {
   .gift-list {
     width: 298px;
     margin: 32px auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+
     .gift {
-      width: 142px;
-      height: 226px;
+      display: inline-block;
+      width: calc(50% - 7px);
       box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.16);
       margin-bottom: 16px;
       cursor: pointer;
+      background: white;
 
       &.isDisable {
         cursor: default;
+      }
+
+      &:nth-child(2n -1) {
+        margin-right: 14px;
       }
 
       .overlay {
@@ -141,8 +144,8 @@ export default {
         }
       }
       .thumbnail {
-        width: 142px;
-        height: 142px;
+        width: 100%;
+        height: auto;
 
         img {
           width: 100%;
@@ -157,13 +160,12 @@ export default {
         .title {
           font-size: 14px;
           line-height: 1.43;
+          height: 40px;
           word-break: keep-all;
-          font-family: AppleSDGothicNeo, sans-serif;
         }
         .action {
           font-size: 10px;
           margin-top: 12px;
-          font-family: AppleSDGothicNeo, sans-serif;
           display: flex;
           align-items: center;
 

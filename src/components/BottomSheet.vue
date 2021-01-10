@@ -8,7 +8,8 @@
       <div class="bottom-sheet-container" v-show="isOpen">
         <div class="bottom-sheet">
           <div class="bottom-sheet-header">
-            <img class="image" :src="present.imageUrl" alt="" />
+            <img class="image" :src="present.imageUrl" />
+
             <img
               class="icon-close"
               @click="handleClose"
@@ -51,8 +52,6 @@
               </div>
             </div>
           </div>
-
-          <input type="hidden" value="주소주소주소" id="address" />
 
           <button :class="['button', { active: isValid }]" @click="handleClick">
             선물하기
@@ -103,12 +102,45 @@ export default {
     },
     copyAddress() {
       // TODO: 주소 필요
-      const input = document.querySelector("#address");
-      input.setAttribute("type", "text");
-      input.select();
-      document.execCommand("copy");
-      input.setAttribute("type", "hidden");
-      window.getSelection().removeAllRanges();
+      let textarea;
+      let result;
+      const address = "address";
+
+      try {
+        textarea = document.createElement("textarea");
+        textarea.setAttribute("readonly", true);
+        textarea.setAttribute("contenteditable", true);
+        textarea.style.position = "fixed";
+        textarea.value = address;
+
+        document.body.appendChild(textarea);
+
+        textarea.focus();
+        textarea.select();
+
+        const range = document.createRange();
+        range.selectNodeContents(textarea);
+
+        const sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(range);
+
+        textarea.setSelectionRange(0, textarea.value.length);
+        result = document.execCommand("copy");
+      } catch (err) {
+        console.error(err);
+        result = null;
+      } finally {
+        document.body.removeChild(textarea);
+      }
+
+      if (!result) {
+        result = prompt("꾸욱 눌러서 복사해주세요.", address);
+        if (!result) {
+          return false;
+        }
+      }
+      return true;
     },
     updatePresent() {
       const isConfirmed = confirm(
@@ -197,20 +229,22 @@ export default {
     z-index: 9999;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-end;
 
     .bottom-sheet-header {
       position: relative;
       width: 100%;
-      height: 360px;
-      min-height: 360px;
+      height: 100%;
       border-top-left-radius: 10px;
       border-top-right-radius: 10px;
+      overflow: hidden;
 
       .image {
         width: 100%;
-        height: 100%;
         object-fit: cover;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
       }
 
       .icon-close {
@@ -224,8 +258,8 @@ export default {
     .form-container {
       display: flex;
       flex-direction: column;
-      flex: 1;
       padding: 16px 16px 8px 16px;
+      min-height: 280px;
 
       .form-header {
         display: flex;
@@ -258,7 +292,7 @@ export default {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        flex: 1;
+        flex: 0 0 0;
         align-items: center;
 
         .input {
@@ -273,8 +307,9 @@ export default {
           }
 
           &.message {
-            flex: 1;
             margin-bottom: 16px;
+            height: 80px;
+            min-height: 80px;
             vertical-align: to-upper-case($string: "");
             resize: none;
           }

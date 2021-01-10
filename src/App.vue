@@ -55,9 +55,6 @@ export default {
   created() {
     this.loadPresents();
   },
-  updated() {
-    window.scrollTo(0, window.scrollY + 1);
-  },
   methods: {
     loadPresents() {
       const presentsRef = firebase.database().ref("presents");
@@ -72,7 +69,7 @@ export default {
       });
     },
     handleClick(present) {
-      this.isOpen = !this.isOpen;
+      this.isOpen = true;
       this.selectedPresent = present;
     },
     handleClose() {
