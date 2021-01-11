@@ -56,7 +56,7 @@
 
 <script>
 export default {
-  name: "Celebrate",
+  name: 'Celebrate',
   props: {
     presents: {
       type: Array,
@@ -66,11 +66,11 @@ export default {
   methods: {
     handleSubmitClick(present) {
       if (present.isSoldout) {
-        alert("이미 다른 사람이 선물했어요.");
+        alert('이미 다른 사람이 선물했어요.');
         return;
       }
 
-      this.$emit("click", present);
+      this.$emit('click', present);
     },
   },
 };
@@ -141,7 +141,7 @@ export default {
 
         &.is-disable {
           display: block;
-          opacity: 0.3;
+          opacity: 0.7;
         }
       }
       .thumbnail {
