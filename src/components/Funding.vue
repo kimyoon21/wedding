@@ -15,13 +15,13 @@
       끼니를 해결하지 못하는 아이들에게<br />
       따뜻한 한 끼로 나누어주세요.
     </p>
-    <Button @click="funding">기부금 전달하기</Button>
+    <Button @click="funding">기부하기</Button>
 
     <a
       href="https://www.kfhi.or.kr/apps/campaign/2020_stophunger_domestic_2.asp?id=540&mcode=658&utm_medium=display_ad&utm_source=youtube&utm_campaign=2020_stophunger_domestic_2&gclid=Cj0KCQiA5bz-BRD-ARIsABjT4nieWe1teUo7KT5HSTinY-IG9KFVj7BRfzI7I_YYAqapQ4jQFsqEqYIaAvqqEALw_wcB"
       target="_blank"
       class="link"
-      >기부처 알아보기</a
+      >기부처 확인하기</a
     >
   </div>
 </template>
@@ -65,8 +65,7 @@ export default {
   .link {
     display: inline-block;
     margin-top: 24px;
-    color: #202121;
-    text-decoration: none;
+    color: #295238;
   }
 }
 </style>
