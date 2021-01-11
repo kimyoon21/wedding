@@ -1,6 +1,6 @@
 <template>
   <div class="live">
-    <img src="../assets/images/flower.png" class="flower" />
+    <img src="../assets/images/hands.png" class="hands" />
     <div>
       <p>"우리 손 잡을까요?"<br />
         각자의 삶을 열심히 살아온 저희가,<br />
@@ -16,7 +16,10 @@
         대신 전세계 모두가 참여할 수 있는<br />
         Youtube Live방송으로 함께 하려고 합니다.<br />
         여러분이 저희와 함께 있다고 느낄 수 있도록<br />
-        온라인으로 참석해서 채팅으로 축하해주세요!
+        온라인으로 참석해서 채팅으로 축하해주세요.
+      </p>
+      <p>
+        그리고 위 애니메이션은 꼭 소리를 켜고 봐주세요!
       </p>
     </div>
     <Button @click="attendance">영혼 참석하기</Button>
@@ -41,16 +44,19 @@ export default {
   padding-left: $padding-vertical;
   padding-right: $padding-vertical;
   text-align: center;
-  .flower {
-    width: 70px;
+  .hands {
+    width: 75px;
     margin-bottom: 16px;
   }
   p {
     margin-bottom: 16px;
     line-height: 24px;
     &:last-child {
-      margin-bottom: 45px;
+      margin-bottom: 40px;
+      font-size : 12px;
+      color: #295138;
     }
+
   }
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="funding">
-    <img src="../assets/images/hands.png" class="hands" />
+    <img src="../assets/images/flower.png" class="flower" />
     <h2 class="h2">
       둘째, 기부를 통해 뜻깊은 날로 만들기
     </h2>
@@ -49,9 +49,10 @@ export default {
   padding-left: $padding-vertical;
   padding-right: $padding-vertical;
   text-align: center;
-  .hands {
-    width: 168px;
-    margin-bottom: 32px;
+
+  .flower {
+    width: 70px;
+    margin-bottom: 26px;
   }
   .h2 {
     font-size: 16px;
