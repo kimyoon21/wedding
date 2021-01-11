@@ -4,12 +4,9 @@
       <img src="~@/assets/images/intro-image.png" />
     </div>
     <div class="movie">
-      <video
-        src="/test.mp4"
-        poster="/img/video-thumbnail.jpg"
-        :autoplay="getOS() !== 'iOS'"
-        controls
-      />
+      <video poster="/img/video-thumnail.jpg" controls>
+        <source src="/test.mp4" type="video/mp4" />
+      </video>
     </div>
   </div>
 </template>
