@@ -33,25 +33,25 @@
         </a>
       </div>
       <div class="profile">
-        <a target="_blank" href="https://blog.gangnamunni.com/blog/design">
+        <a target="_blank" href="https://blog.gangnamunni.com/post/product-design-and-product-owner">
           <div class="thumbnail jane"></div>
           <div class="name">Jane</div>
-          <div class="role">디자인</div>
+          <div class="role">디자인&아내</div>
         </a>
       </div>
       <div class="profile">
         <a target="_blank" href="https://brunch.co.kr/@kimyoon21/30">
           <div class="thumbnail brown"></div>
           <div class="name">Brown</div>
-          <div class="role">PO</div>
+          <div class="role">PO&남편</div>
         </a>
       </div>
     </div>
     <p class="description">
-      하나를 해도 제대로 하는 이 사람들이 궁금한가요?
+      하나를 해도 멋지게 하는 이 사람들이 궁금한가요?
     </p>
     <a href="https://blog.gangnamunni.com/" target="_blank" class="recruit">
-      동료가 되기
+      힐링페이퍼의 동료가 되기
     </a>
   </div>
 </template>
@@ -132,7 +132,7 @@ export default {
   }
   .recruit {
     display: block;
-    width: 154px;
+    width: 184px;
     height: 44px;
     line-height: 44px;
     background-color: #ffb22c;
