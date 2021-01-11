@@ -99,23 +99,6 @@ export default {
         return;
       }
 
-      this.updatePresent();
-    },
-    copyAddress() {
-      const address = "서울시 강남구 역삼동 792-33 서담빌리지A동 205호";
-      var tmpTextarea = document.createElement("textarea");
-      tmpTextarea.value = address;
-
-      document.body.appendChild(tmpTextarea);
-      tmpTextarea.select();
-      tmpTextarea.setSelectionRange(0, 9999);
-
-      document.execCommand("copy");
-      document.body.removeChild(tmpTextarea);
-      alert("신혼집 주소가 복사되었어요.");
-      window.open(this.present.link);
-    },
-    updatePresent() {
       const isConfirmed = confirm(
         `${this.present.name} 선물을 하시겠어요? 확인해주시면 선물 완료로 표시됩니다.`
       );
@@ -141,11 +124,25 @@ export default {
             }
 
             this.copyAddress();
+            window.open(this.present.link);
             this.handleClose();
             this.senderName = null;
             this.message = null;
           }
         );
+    },
+    copyAddress() {
+      const address = "서울시 강남구 역삼동 792-33 서담빌리지A동 205호";
+      var tmpTextarea = document.createElement("textarea");
+      tmpTextarea.value = address;
+
+      document.body.appendChild(tmpTextarea);
+      tmpTextarea.select();
+      tmpTextarea.setSelectionRange(0, 9999);
+
+      document.execCommand("copy");
+      document.body.removeChild(tmpTextarea);
+      alert("신혼집 주소가 복사되었어요.");
     },
   },
 };
@@ -201,8 +198,6 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-bottom: constant(safe-area-inset-bottom);
-    padding-bottom: env(safe-area-inset-bottom);
 
     .bottom-sheet-header {
       position: relative;
@@ -211,7 +206,7 @@ export default {
       border-top-left-radius: 10px;
       border-top-right-radius: 10px;
       overflow: hidden;
-
+      flex: 10 1;
       .image {
         width: 100%;
         object-fit: cover;
@@ -230,9 +225,10 @@ export default {
 
     .form-container {
       display: flex;
+      flex: 1 1 230px;
       flex-direction: column;
       padding: 16px 16px 8px 16px;
-      min-height: 280px;
+      // min-height: 280px;
 
       .form-header {
         display: flex;
@@ -296,11 +292,11 @@ export default {
     }
 
     .button-bottom {
+      flex: 0 0 54px;
       cursor: default;
       width: 100%;
-      height: 52px;
-      padding: 16px 0 calc(constant(safe-area-inset-bottom) + 16px) 0;
-      padding: 16px 0 calc(env(safe-area-inset-bottom) + 16px) 0;
+      margin-bottom: constant(safe-area-inset-bottom);
+      margin-bottom: env(safe-area-inset-bottom);
       background-color: #eaeaea;
       color: #999999;
       &.active {
