@@ -4,7 +4,11 @@
       <img src="~@/assets/images/intro-image.png" />
     </div>
     <div class="movie">
-      <video poster="/img/video-thumnail.jpg" controls>
+      <video
+        poster="/img/video-thumnail.jpg"
+        :autoplay="getOS() !== 'iOS'"
+        controls
+      >
         <source src="/test.mp4" type="video/mp4" />
       </video>
     </div>
