@@ -1,7 +1,8 @@
 <template>
   <div class="credit">
     <h3 class="h2">
-      이 페이지를 만든 사람들
+      이 <a href ="https://github.com/kimyoon21/wedding" target="_blank"
+         class="link" >페이지</a>를 만든 사람들
     </h3>
     <div class="profile-list">
       <div class="profile">
@@ -74,6 +75,7 @@ export default {
     font-size: 16px;
     font-weight: normal;
     margin-bottom: 38px;
+    color: #295238;
   }
   .profile-list {
     display: flex;
@@ -129,6 +131,7 @@ export default {
   .description {
     font-size: 12px;
     margin-bottom: 16px;
+    color: #295238;
   }
   .recruit {
     display: block;
@@ -140,6 +143,11 @@ export default {
     text-decoration: none;
     font-size: 16px;
     margin: 0 auto;
+  }
+  .link {
+    display: inline-block;
+    margin-top: 24px;
+    color: #295238;
   }
 }
 </style>
