@@ -110,6 +110,7 @@ export default {
       document.execCommand("copy");
       document.body.removeChild(tmpTextarea);
       alert("신혼집 주소가 복사되었어요.");
+      window.open(this.present.link);
     },
     updatePresent() {
       const isConfirmed = confirm(
