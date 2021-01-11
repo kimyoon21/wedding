@@ -2,7 +2,7 @@
   <div class="funding">
     <img src="../assets/images/hands.png" class="hands" />
     <h2 class="h2">
-      둘째, 결혼을 기념하는 기부금 전하기
+      둘째, 기부를 통해 행복한 날을 축하하기
     </h2>
     <p>
       인생에서 가장 행복한 날,<br />
@@ -15,7 +15,7 @@
       끼니를 해결하지 못하는 아이들에게<br />
       따뜻한 한 끼로 나누어주세요.
     </p>
-    <Button @click="funding">기부하기</Button>
+    <Button @click="funding">기부금 전달하기</Button>
 
     <a
       href="https://www.kfhi.or.kr/apps/campaign/2020_stophunger_domestic_2.asp?id=540&mcode=658&utm_medium=display_ad&utm_source=youtube&utm_campaign=2020_stophunger_domestic_2&gclid=Cj0KCQiA5bz-BRD-ARIsABjT4nieWe1teUo7KT5HSTinY-IG9KFVj7BRfzI7I_YYAqapQ4jQFsqEqYIaAvqqEALw_wcB"
