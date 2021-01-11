@@ -297,10 +297,11 @@ export default {
       padding: 16px 0 calc(constant(safe-area-inset-bottom) + 16px) 0;
       padding: 16px 0 calc(env(safe-area-inset-bottom) + 16px) 0;
       background-color: #eaeaea;
-
+      color: #999999;
       &.active {
         cursor: pointer;
         background-color: #ffb22c;
+        color: #202121;
       }
     }
   }
