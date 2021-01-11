@@ -159,10 +159,10 @@ export default {
 }
 
 .slide-enter-active {
-  transition: all 0.4s ease-in;
+  transition: all 0.28s ease-in-out;
 }
 .slide-leave-active {
-  transition: all 0.4s ease-in;
+  transition: all 0.28s ease-in-out;
 }
 .slide-enter,
 .slide-leave-to {
