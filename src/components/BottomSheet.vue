@@ -13,7 +13,7 @@
             <img
               class="icon-close"
               @click="handleClose"
-              src="../assets/images/close.svg"
+              src="~@/assets/images/close.svg"
             />
           </div>
 

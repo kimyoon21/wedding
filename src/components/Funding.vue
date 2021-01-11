@@ -1,6 +1,6 @@
 <template>
   <div class="funding">
-    <img src="../assets/images/hands.png" class="hands" />
+    <img src="~@/assets/images/hands.png" class="hands" />
     <h2 class="h2">
       둘째, 기부를 통해 행복한 날을 축하하기
     </h2>

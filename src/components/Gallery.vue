@@ -1,6 +1,6 @@
 <template>
   <div class="gallery">
-    <img src="../assets/images/bunny.png" class="bunny" />
+    <img src="~@/assets/images/bunny.png" class="bunny" />
     <div class="description">
       photo gallery
     </div>
@@ -114,7 +114,7 @@ export default {
           left: 0;
           width: 240px;
           height: 360px;
-          background-image: url("../assets/images/arch.png");
+          background-image: url("~@/assets/images/arch.png");
           background-repeat: no-repeat;
           background-size: 240px auto;
           background-position: top left;

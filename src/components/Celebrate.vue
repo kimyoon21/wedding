@@ -9,7 +9,7 @@
       더 의미있을거라는 생각에<br />
       2가지 방법을 준비해보았어요.
     </p>
-    <img src="../assets/images/goose.png" class="goose" />
+    <img src="~@/assets/images/goose.png" class="goose" />
     <h2 class="h2">첫째. 쓸 때마다 당신을 떠올릴 선물하기</h2>
     <p class="black">
       저희가 신혼집을 꾸리고 살면서<br />
@@ -38,13 +38,13 @@
         <div class="contents">
           <div class="title">{{ present.title }}</div>
           <div class="action">
-            <img src="../assets/images/heart.svg" alt="" srcset="" />선물하기
+            <img src="~@/assets/images/heart.svg" alt="" srcset="" />선물하기
           </div>
         </div>
       </div>
     </div>
 
-    <img src="../assets/images/cat.png" class="cat" />
+    <img src="~@/assets/images/cat.png" class="cat" />
     <p class="black">
       휴지, 물티슈, 디퓨저 등은 이미 너무 많아서<br />
       당근마켓에 팔아야 하나 고민인 수준이라 정중하게 사양할게요.<br />
@@ -56,7 +56,7 @@
 
 <script>
 export default {
-  name: 'Celebrate',
+  name: "Celebrate",
   props: {
     presents: {
       type: Array,
@@ -66,11 +66,11 @@ export default {
   methods: {
     handleSubmitClick(present) {
       if (present.isSoldout) {
-        alert('이미 다른 사람이 선물했어요.');
+        alert("이미 다른 사람이 선물했어요.");
         return;
       }
 
-      this.$emit('click', present);
+      this.$emit("click", present);
     },
   },
 };
