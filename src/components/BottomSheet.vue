@@ -13,7 +13,7 @@
             <img
               class="icon-close"
               @click="handleClose"
-              src="../assets/images/close.svg"
+              src="~@/assets/images/close.svg"
             />
           </div>
 
@@ -51,7 +51,10 @@
             </div>
           </div>
 
-          <button :class="['button', { active: isValid }]" @click="handleClick">
+          <button
+            :class="['button-bottom', { active: isValid }]"
+            @click="handleClick"
+          >
             선물하기
           </button>
         </div>
@@ -198,6 +201,8 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding-bottom: constant(safe-area-inset-bottom);
+    padding-bottom: env(safe-area-inset-bottom);
 
     .bottom-sheet-header {
       position: relative;
@@ -290,7 +295,7 @@ export default {
       }
     }
 
-    .button {
+    .button-bottom {
       cursor: default;
       width: 100%;
       height: 52px;

@@ -28,10 +28,10 @@
 
 <script>
 export default {
-  name: 'Divider',
+  name: "Divider",
   methods: {
     attendance() {
-      window.open('https://youtu.be/yU9UULnBt0w');
+      window.open("https://youtu.be/yU9UULnBt0w");
     },
   },
 };

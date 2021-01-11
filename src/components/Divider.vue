@@ -1,12 +1,12 @@
 <template>
   <div class="divider">
-    <img src="../assets/images/divider.png" />
+    <img src="~@/assets/images/divider.png" />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Divider',
+  name: "Divider",
 };
 </script>
 

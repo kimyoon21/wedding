@@ -33,7 +33,7 @@ export default {
     },
     imageUrl() {
       const imageNumber = Math.floor(Math.random() * (6 - 1) + 1);
-      return require(`../assets/images/floral-leaf-${imageNumber}.png`);
+      return `/img/floral-leaf/floral-leaf-${imageNumber}.png`;
     },
   },
 };
