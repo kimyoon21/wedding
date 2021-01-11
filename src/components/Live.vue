@@ -1,8 +1,9 @@
 <template>
   <div class="live">
-    <img src="../assets/images/hands.png" class="hands" />
+    <img src="~@/assets/images/hands.png" class="hands" />
     <div>
-      <p>"우리 손 잡을까요?"<br />
+      <p>
+        "우리 손 잡을까요?"<br />
         각자의 삶을 열심히 살아온 저희가,<br />
         이제는 손을 잡고 함께 나란히 걸어가려 합니다.<br />
         사랑한다는 말이 어울리는 사람을 만나<br />
@@ -53,10 +54,9 @@ export default {
     line-height: 24px;
     &:last-child {
       margin-bottom: 40px;
-      font-size : 12px;
+      font-size: 12px;
       color: #295138;
     }
-
   }
 }
 </style>

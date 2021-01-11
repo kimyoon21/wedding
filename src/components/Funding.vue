@@ -1,6 +1,6 @@
 <template>
   <div class="funding">
-    <img src="../assets/images/flower.png" class="flower" />
+    <img src="~@/assets/images/flower.png" class="flower" />
     <h2 class="h2">
       둘째, 기부를 통해 뜻깊은 날로 만들기
     </h2>
@@ -14,8 +14,8 @@
       장기화된 코로나로 인해<br />
       끼니를 해결하지 못하는 아이들에게<br />
       따뜻한 한 끼로 나누어주세요.<br />
-      감사한 마음 잘 모아서 전하고<br/>
-      나누어주신 만큼 더욱 행복하게 살겠습니다.<br/>
+      감사한 마음 잘 모아서 전하고<br />
+      나누어주신 만큼 더욱 행복하게 살겠습니다.<br />
     </p>
     <Button @click="funding">기부금 전달하기</Button>
 
@@ -33,9 +33,7 @@ export default {
   name: "Divider",
   methods: {
     funding() {
-      window.open(
-        "https://qr.kakaopay.com/281006011189386490008935"
-      );
+      window.open("https://qr.kakaopay.com/281006011189386490008935");
     },
   },
 };
