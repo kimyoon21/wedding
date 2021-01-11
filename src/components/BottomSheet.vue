@@ -24,9 +24,9 @@
                 <div class="price">
                   {{
                     present.price &&
-                    present.price
-                      .toString()
-                      .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                      present.price
+                        .toString()
+                        .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
                   }}원
                 </div>
               </div>
