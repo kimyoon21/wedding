@@ -197,12 +197,12 @@ export default {
     z-index: 9999;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: space-between;
 
     .bottom-sheet-header {
       position: relative;
       width: 100%;
-      height: 100%;
+      height: 100vw;
       border-top-left-radius: 10px;
       border-top-right-radius: 10px;
       overflow: hidden;
