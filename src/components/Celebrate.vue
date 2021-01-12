@@ -38,7 +38,15 @@
         <div class="contents">
           <div class="title">{{ present.title }}</div>
           <div class="action">
-            <img src="~@/assets/images/heart.svg" alt="" srcset="" />선물하기
+            <img
+              :src="
+                present.isSoldout === true
+                  ? require('../assets/images/heart-black.svg')
+                  : require('../assets/images/heart.svg')
+              "
+              alt=""
+              srcset=""
+            />선물하기
           </div>
         </div>
       </div>
